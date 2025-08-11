@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  cloudtrack-app:
+    build: .
+    container_name: cloudtrack-app
+    working_dir: /app
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
