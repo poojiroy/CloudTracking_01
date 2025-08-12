@@ -3,6 +3,7 @@ version: '3.8'
 services:
   cloudtrack-app:
     build: .
+    image: cloudtrack-app:latest
     container_name: cloudtrack-app
     working_dir: /app
     env_file:
