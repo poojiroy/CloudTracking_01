@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        AWS_REGION = 'ap-south-1'
-        ECR_REPO = '923714621804.dkr.ecr.ap-south-1.amazonaws.com/cloudtrack'
+        AWS_REGION = 'us-east-1'
+        ECR_REPO = '923714621804.dkr.ecr.us-east-1.amazonaws.com/cloudtracking'
         IMAGE_TAG = "${BUILD_NUMBER}"
         LOCAL_IMAGE_NAME = "cloudtrack-app"  // from docker-compose.yaml
     }
