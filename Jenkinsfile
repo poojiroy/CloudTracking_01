@@ -14,10 +14,10 @@ pipeline {
 
     stages {
         stage('Checkout Code') {
-            steps {
-                git branch: 'main',
-                git branch: 'main', url: "${env.REPO_URL}"
-            }
+            git(
+            branch: 'main',
+            url: "${env.REPO_URL}"
+        )
         }
 
         stage('Login to ECR') {
